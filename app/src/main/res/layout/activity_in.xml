@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.InActivity">
+
+    <TextView
+        android:id="@+id/freefreelance_text"
+        android:layout_width="168dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="FreeFreeLance"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/request_text"
+        android:layout_width="279dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:text="Будьласка, увійдіть або зареєструйтесь!"
+        app:layout_constraintEnd_toEndOf="@+id/freefreelance_text"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/freefreelance_text"
+        app:layout_constraintTop_toBottomOf="@+id/freefreelance_text" />
+
+    <EditText
+        android:id="@+id/email_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="E-mail:"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/request_text"
+        app:layout_constraintStart_toStartOf="@+id/request_text"
+        app:layout_constraintTop_toBottomOf="@+id/request_text" />
+
+    <EditText
+        android:id="@+id/password_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Пароль:"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email_text2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_text2"
+        app:layout_constraintTop_toBottomOf="@+id/email_text2" />
+
+    <Button
+        android:id="@+id/in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Увійти"
+        app:layout_constraintEnd_toStartOf="@+id/up_button"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:text="Зареєструватись"
+        app:layout_constraintBottom_toBottomOf="@+id/in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/in_button"
+        app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>
