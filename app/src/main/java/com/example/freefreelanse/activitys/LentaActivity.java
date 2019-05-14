@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.freefreelanse.R;
 import com.example.freefreelanse.app.AppController;
+import com.example.freefreelanse.app.Menager;
+import com.fasterxml.jackson.core.sym.Name;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
@@ -23,30 +26,37 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 
 public class LentaActivity extends AppCompatActivity implements View.OnClickListener {
-    public String string;
+    String name;
+    String phone;
     MyTask mt;
+    Button button;
+
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lenta);
-        Button buttonGo = findViewById(R.id.button_go);
-        buttonGo.setOnClickListener(this);
+        mt = new MyTask();
+        mt.execute();
+        textView = findViewById(R.id.textView);
+        textView.setText("Hello, "+name);
+        button = findViewById(R.id.button);
+        button.setOnClickListener(this);
+        //Button buttonGo = findViewById(R.id.button_go);
+        //buttonGo.setOnClickListener(this);
 
     }
     @Override
     public void onClick(View v) {
-        mt = new MyTask();
-        mt.execute();
-        switch (v.getId()){
-            case R.id.button_go:
-
-
-
-              Log.i("s", " "+string);
+        switch (v.getId()) {
+            case R.id.button:
+                Log.i("s", "e = " + Menager.EMAILE + "n = " + name);
                 break;
-
         }
+
+
+
 
     }
     class MyTask extends AsyncTask<Void, Void, Void> {
@@ -56,10 +66,10 @@ public class LentaActivity extends AppCompatActivity implements View.OnClickList
 
                 DefaultHttpClient hc = new DefaultHttpClient();
                 ResponseHandler response = new BasicResponseHandler();
-                HttpGet http = new HttpGet("http://10.0.2.2:8080/demo/email?name=nick");
+                HttpGet http = new HttpGet("http://10.0.2.2:8080/demo/nameforemail?email="+ Menager.EMAILE);
                 //получаем ответ от сервера
             try {
-                string = (String) hc.execute(http, response);
+                name = (String) hc.execute(http, response);
             } catch (IOException e) {
                 e.printStackTrace();
             }

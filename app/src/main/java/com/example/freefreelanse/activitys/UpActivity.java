@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.freefreelanse.R;
+import com.example.freefreelanse.app.Menager;
 
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
@@ -63,6 +64,8 @@ public class UpActivity extends AppCompatActivity implements View.OnClickListene
 
 
                 myTask.execute();
+                Menager.EMAILE = emailString;
+
                 Intent intent = new Intent(this, LentaActivity.class);
                 startActivity(intent);
 
