@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.freefreelanse.activitys.InActivity;
+import com.example.freefreelanse.activitys.LentaActivity;
 import com.example.freefreelanse.activitys.UpActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = new Intent(this, InActivity.class);
+        //Intent intent = new Intent(this, InActivity.class);//true
+        Intent intent = new Intent(this, LentaActivity.class);
         startActivity(intent);
     }
 }

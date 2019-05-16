@@ -6,32 +6,97 @@
     android:layout_height="match_parent"
     tools:context=".activitys.LentaActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="110dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+    <Button
+        android:id="@+id/addOrder"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Добавити замовення"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="123dp"
-        android:layout_height="45dp"
+        android:id="@+id/filtr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:text="Фільтр"
+        app:layout_constraintBottom_toBottomOf="@+id/addOrder"
+        app:layout_constraintStart_toEndOf="@+id/addOrder"
+        app:layout_constraintTop_toTopOf="@+id/addOrder"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkPrograming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Програмування"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addOrder" />
+
+    <CheckBox
+        android:id="@+id/disignerBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дизайн"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/checkPrograming"
+        app:layout_constraintStart_toEndOf="@+id/checkPrograming"
+        app:layout_constraintTop_toTopOf="@+id/checkPrograming"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/gameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="Створення ігор"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/disignerBox"
+        app:layout_constraintStart_toEndOf="@+id/disignerBox"
+        app:layout_constraintTop_toTopOf="@+id/disignerBox"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/videoBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Монтаж"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkPrograming"
+        app:layout_constraintTop_toBottomOf="@+id/checkPrograming" />
+
+    <CheckBox
+        android:id="@+id/photoBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Фото"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/videoBox4"
+        app:layout_constraintStart_toEndOf="@+id/videoBox4"
+        app:layout_constraintTop_toTopOf="@+id/videoBox4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="138dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Button"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

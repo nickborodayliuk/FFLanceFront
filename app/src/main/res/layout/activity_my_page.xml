@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.MyPageAtcivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="397dp"
+        android:layout_height="546dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="Ваше ім`я:"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="242dp" />
+
+            <TextView
+                android:id="@+id/trueName"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Бородайлюк Микола" />
+
+            <TextView
+                android:id="@+id/textPhoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Ваш номер телефону:" />
+
+            <TextView
+                android:id="@+id/truePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="+380686207280"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="57dp" />
+
+            <TextView
+                android:id="@+id/textEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Ваш email:" />
+
+            <TextView
+                android:id="@+id/trueEmail"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="paragamelogict@gmail.com" />
+
+            <TextView
+                android:id="@+id/textKFreencesText"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="Ваші Фрінси:" />
+
+            <TextView
+                android:id="@+id/KFreences"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="1000" />
+
+            <Button
+                android:id="@+id/setingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Редагувати особисту інформаціяю" />
+
+            <Button
+                android:id="@+id/buttonLoocOrdersContracts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Переглянути Ваші контракти" />
+
+            <Button
+                android:id="@+id/historiContracts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="історія контрактів" />
+
+            <Button
+                android:id="@+id/activeOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="переглянути ваші замовлення" />
+
+            <Button
+                android:id="@+id/byFreences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Купити фрінси" />
+
+            <Button
+                android:id="@+id/goToLenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вийти в стрічку замовлень"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="550dp" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="вийти з акаунту" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

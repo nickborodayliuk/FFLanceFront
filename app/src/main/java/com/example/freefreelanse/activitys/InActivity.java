@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.freefreelanse.R;
-import com.example.freefreelanse.app.Menager;
+import com.example.freefreelanse.utils.Menager;
 
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
